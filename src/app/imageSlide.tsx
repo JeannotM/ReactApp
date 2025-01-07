@@ -12,11 +12,10 @@ export default function ImageSlide(content: { className: string, content: {Image
     const [text, setText] = useState(images[imgCount].Description);
 
     useEffect(() => {
-        imgCount = 0;
         setText(images[imgCount].Description);
     }, [images])
 
-    let changeAnimation = (it: number) => {
+    const changeAnimation = (it: number) => {
         const img1 = document.querySelector("[alt='"+images[imgCount].Image+"']");
         const img2 = document.querySelector("[alt='"+images[Math.abs((imgCount + it) % images.length)].Image+"']");
 

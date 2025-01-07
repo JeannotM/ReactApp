@@ -1,5 +1,3 @@
-import ImageContent from "./ImageContent";
-
 export default class ProjectModel {
     constructor(name: string, description: string, content: { Image: string, Description: string }[], date: string, link: string) {
         this.Name = name;

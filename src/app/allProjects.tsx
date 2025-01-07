@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import ImageContent from "./models/ImageContent"
 import ProjectModel from "./models/ProjectModel"
 import Project from "./project"
 import styles from "./allProjects.module.css"
