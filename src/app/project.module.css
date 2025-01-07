@@ -1,0 +1,121 @@
+.content {
+    width: 100%;
+    max-width: 1200px;
+    height: 300px;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 5px;
+    display: flex;
+}
+
+.timeline {
+    flex-basis: 10px;
+    border-radius:4px;
+    background-color: white;
+    width: 10px;
+    height: 100%;
+}
+
+.projectInformation {
+    grid-template-columns: [pContent] 50% [pPictures] 50%;
+    padding-left: 5px;
+    display: grid;
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.projectDate {
+    margin-left: 80px;
+    font-size: 24px;
+    height: 33px;
+    padding-right: 10px;
+    text-align: right;
+    width: 200px;
+    position: relative;
+}
+
+.projectDate:before {
+    content: "";
+    position:absolute;
+    width: calc(100% + 10px);
+    top:100%;
+    right:0;
+    height: 3px;
+    background-color: white;
+}
+
+.projectDate:after {
+    left:-30px;
+    top: calc(100% - 10px);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position:absolute;
+    content: "";
+    box-shadow: 0 0 0 3px white;
+}
+
+.projectText {
+    padding: 20px;
+    grid-column: pContent;
+}
+
+.projectPictureContainer {
+    grid-column: pPictures;
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+
+.projectPicture {
+    overflow:hidden;
+    position:relative;
+    border-radius: 50px;
+    width: 100%;
+    height:100%;
+}
+
+.projectIconContainer {
+    z-index: 5;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    grid-column: pPictures;
+    width: 60px;
+    padding: 10px;
+    height: fit-content;
+    position:absolute;
+    right:0;
+    top:0;
+    border-radius: 0 0 0 33px;
+}
+
+.projectIconContainer:before, .projectIconContainer:after {
+    z-index: 4;
+    content: "";
+    width:60px;
+    height:60px;
+    position:absolute;
+    border-radius: 200%;
+    box-shadow: 38px -38px 0 10px var(--background);
+}
+
+.projectIconContainer:before {
+    bottom:-60px;
+    right:0;
+}
+
+.projectIconContainer:after {
+    top:0;
+    left:-60px;
+}
+
+.projectIcon {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    padding:5px;
+    z-index: 5;
+    border-radius: 50%;
+}
