@@ -8,13 +8,24 @@
 
 .buttonContainer button {
     background: none;
-    background-image: radial-gradient(closest-side at 50% 95%, white 5%, black 40%);
+    background-image: radial-gradient(closest-side at 50% 95%, var(--foreground) 5%, var(--background) 40%);
     border:none;
     padding: 3px 5px;
     cursor: pointer;
     margin: 10px;
+    position:relative;
+}
+
+.buttonContainer button:not(:first-child):after {
+    content: "";
+    position: absolute;
+    background-color: var(--foreground);
+    left: -0.8em;
+    width: 1px;
+    height: 50%;
+    margin-top: 2px;
 }
 
 .buttonContainer button:hover {
-    background-image: radial-gradient(closest-side at 50% 95%, white 10%, black 70%);
+    background-image: radial-gradient(closest-side at 50% 95%, var(--foreground) 10%,  var(--background) 70%);
 }

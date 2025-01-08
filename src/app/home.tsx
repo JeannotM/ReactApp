@@ -16,7 +16,7 @@ export default function HomeLayout() {
             <a href="https://github.com/JeannotM" className={styles.icon}>
                 <Image src="/git.png" alt="Github logo" width={25} height={25}/></a>
             </div>
-            <Image src="/handsome-pic.jpg" alt="Picture of author" className={styles.picture} width={1280} height={720} />
+            <Image src="/handsome-pic.jpg" alt="Picture of author" className={styles.picture} width={1280} height={1280} />
         </div>
     </div>
   );

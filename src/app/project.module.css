@@ -11,7 +11,7 @@
 .timeline {
     flex-basis: 10px;
     border-radius:4px;
-    background-color: white;
+    background-color: var(--foreground);
     width: 10px;
     height: 100%;
 }
@@ -42,7 +42,7 @@
     top:100%;
     right:0;
     height: 3px;
-    background-color: white;
+    background-color: var(--foreground);
 }
 
 .projectDate:after {
@@ -53,7 +53,7 @@
     border-radius: 50%;
     position:absolute;
     content: "";
-    box-shadow: 0 0 0 3px white;
+    box-shadow: 0 0 0 3px var(--foreground);
 }
 
 .projectText {
@@ -112,10 +112,21 @@
 }
 
 .projectIcon {
-    background-color: white;
+    background-color: var(--foreground);
     width: 40px;
     height: 40px;
     padding:5px;
     z-index: 5;
     border-radius: 50%;
+    transition: box-shadow 0.4s;
+    box-shadow: 0 0 0 0 var(--foreground);
 }
+
+.projectIcon:hover {
+    box-shadow: 0 0 6px 1px var(--foreground);
+}
+
+.projectIcon img {
+    filter: invert(var(--filter));
+}
+

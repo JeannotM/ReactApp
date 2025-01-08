@@ -23,6 +23,7 @@
     padding: 20px;
     padding-right: 40px;
     text-align: right;
+    word-break:break-all;
 }
 
 .pictureFrame {
@@ -79,10 +80,17 @@
     justify-items: center;
     justify-content: center;
     padding:5px;
-    background-color:#eee;
+    background-color: var(--foreground);
     border-radius: 50%;
+    transition: box-shadow 0.4s;
+    box-shadow: 0 0 0 0 var(--foreground);
+}
+
+.icon:hover {
+    box-shadow: 0 0 6px 1px var(--foreground);
 }
 
 .icon img {
+    filter: saturate(0.0) contrast(600.0) invert(var(--filter));
     border-radius: 5px;
 }

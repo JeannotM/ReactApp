@@ -38,7 +38,7 @@
 }
 
 .controls button:hover {
-    background-color: #fff3;
+    background-color: var(--background);
 }
 
 .shown {
@@ -49,6 +49,6 @@
     position: absolute;
     bottom: 0;
     left: 30px;
-    text-shadow: 2px 2px 3px #00000080;
+    text-shadow: 2px 2px 3px var(--background);
     padding: 5px;
 }
